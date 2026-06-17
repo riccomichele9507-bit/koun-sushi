@@ -23,7 +23,17 @@ export const restaurant = {
     label: "Lunedì – Domenica",
     note: "Aperto tutti i giorni",
   },
-  coperto: 200, // centesimi
+  coperto: 200, // centesimi (solo in sede, non su asporto/consegna)
+  delivery: {
+    available: true,
+    /** Costo consegna in centesimi (0 = gratuita). */
+    feeCents: 0,
+    /** Ordine minimo per la consegna (cent). */
+    minOrderCents: 1500,
+    /** Soglia per consegna gratuita (cent); ignorata se feeCents = 0. */
+    freeAboveCents: 0,
+    note: "Consegna nei dintorni di Molfetta",
+  },
   fixedMenus: [
     { name: "Menù Pranzo", detail: "Lunedì – Venerdì", price: 1990 },
     { name: "Menù Pranzo", detail: "Sabato, Domenica e Festivi", price: 2690 },

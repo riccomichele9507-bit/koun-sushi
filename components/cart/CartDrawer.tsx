@@ -8,7 +8,6 @@ import { useUiStore } from "@/store/ui-store";
 import { useCartStore, useCartLines, useCartSubtotal } from "@/store/cart-store";
 import { formatCents } from "@/lib/format";
 import { computePromo } from "@/lib/promo/auto-promo";
-import { buildOrderWhatsappLink } from "@/lib/whatsapp-order";
 import { AddButton } from "@/components/menu/AddButton";
 import { PromoProgress } from "@/components/cart/PromoProgress";
 
@@ -134,16 +133,15 @@ export function CartDrawer() {
                     )}
                   </div>
 
-                  <a
-                    href={buildOrderWhatsappLink(lines)}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex w-full items-center justify-center gap-2 rounded-full bg-[color:var(--wa)] py-3.5 text-sm font-semibold uppercase tracking-[0.15em] text-background transition-transform active:scale-[0.98]"
+                  <Link
+                    href="/checkout"
+                    onClick={close}
+                    className="flex w-full items-center justify-center gap-2 rounded-full bg-gold py-3.5 text-sm font-semibold uppercase tracking-[0.15em] text-background transition-transform active:scale-[0.98]"
                   >
-                    Ordina su WhatsApp
-                  </a>
+                    Vai alla cassa
+                  </Link>
                   <p className="text-center text-[0.65rem] text-muted/70">
-                    L&apos;ordine verrà confermato in chat. Prezzi salvo errori; coperto € 2,00 in sede.
+                    Scegli ritiro o consegna, orario e pagamento al passo successivo.
                   </p>
                 </div>
               </>
