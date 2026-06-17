@@ -18,16 +18,11 @@ export function WhatsappFab() {
       rel="noopener noreferrer"
       aria-label="Scrivici su WhatsApp"
       data-path={pathname}
-      className="group fixed bottom-5 left-5 z-30 flex items-center gap-2 rounded-full border border-[color:var(--wa)]/40 bg-background/70 py-2.5 pl-2.5 pr-4 backdrop-blur-md transition-all hover:gap-2.5 hover:border-[color:var(--wa)]"
+      className="group fixed bottom-5 left-5 z-30 grid h-14 w-14 place-items-center rounded-full bg-[color:var(--wa)] shadow-lg transition-transform hover:scale-105 active:scale-95"
     >
-      <span className="grid h-9 w-9 place-items-center rounded-full bg-[color:var(--wa)]">
-        <svg viewBox="0 0 24 24" className="h-5 w-5 fill-background">
-          <path d={WA_ICON} />
-        </svg>
-      </span>
-      <span className="text-xs font-medium uppercase tracking-[0.15em] text-foreground">
-        WhatsApp
-      </span>
+      <svg viewBox="0 0 24 24" className="h-7 w-7 fill-background">
+        <path d={WA_ICON} />
+      </svg>
     </a>
   );
 }

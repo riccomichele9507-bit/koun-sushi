@@ -44,6 +44,9 @@ export const restaurant = {
   priceRange: "€€",
   mapsLink:
     "https://www.google.com/maps/search/?api=1&query=Koun+Sushi+Via+Bettino+Craxi+Molfetta",
+  /** Embed Google Maps senza API key (output=embed). */
+  mapEmbedUrl:
+    "https://www.google.com/maps?q=Koun+Sushi+Via+Bettino+Craxi+Molfetta&output=embed",
 } as const;
 
 /** Link WhatsApp con messaggio precompilato. */

@@ -11,7 +11,6 @@ const nav = [
   { href: "/", label: "Home" },
   { href: "/menu", label: "Menu" },
   { href: "/promo", label: "Promo" },
-  { href: "/allergeni", label: "Allergeni" },
 ];
 
 export function Header() {

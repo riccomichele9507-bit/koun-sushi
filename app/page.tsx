@@ -1,8 +1,8 @@
 import { Hero } from "@/components/home/Hero";
 import { PromoBanner } from "@/components/home/PromoBanner";
-import { CategoryGrid } from "@/components/home/CategoryGrid";
 import { FeaturedRail } from "@/components/home/FeaturedRail";
 import { FixedMenus } from "@/components/home/FixedMenus";
+import { LocationMap } from "@/components/home/LocationMap";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 
 export default function HomePage() {
@@ -24,13 +24,13 @@ export default function HomePage() {
         </section>
 
         <section>
-          <SectionHeading kicker="Esplora" title="Le categorie" href="/menu" />
-          <CategoryGrid />
+          <SectionHeading kicker="All you can eat" title="Menù fissi" />
+          <FixedMenus />
         </section>
 
         <section>
-          <SectionHeading kicker="All you can eat" title="Menù fissi" />
-          <FixedMenus />
+          <SectionHeading kicker="Vieni a trovarci" title="La nostra sede" />
+          <LocationMap />
         </section>
       </div>
     </>
