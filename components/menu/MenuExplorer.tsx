@@ -6,6 +6,7 @@ import { menu } from "@/data/menu";
 import { categories } from "@/data/categories";
 import type { CategoryId } from "@/types/dish";
 import { DishCard } from "@/components/menu/DishCard";
+import { DishImage } from "@/components/ui/DishImage";
 import { cn } from "@/lib/utils";
 
 export function MenuExplorer() {
@@ -136,8 +137,15 @@ export function MenuExplorer() {
               }}
               className="scroll-mt-36"
             >
-              <div className="mb-4 flex items-center gap-3">
-                <span className="font-display text-2xl text-gold/30">{cat.kanji}</span>
+              <div className="mb-4 flex items-center gap-3.5">
+                <DishImage
+                  src={cat.image}
+                  alt={cat.label}
+                  from={cat.from}
+                  to={cat.to}
+                  kanji={cat.kanji}
+                  className="h-16 w-16 shrink-0 rounded-xl border border-line/70"
+                />
                 <div>
                   <h2 className="font-display text-xl text-foreground">{cat.label}</h2>
                   <p className="text-xs text-muted">{cat.blurb}</p>
