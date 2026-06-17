@@ -18,7 +18,7 @@ export function WhatsappFab() {
       rel="noopener noreferrer"
       aria-label="Scrivici su WhatsApp"
       data-path={pathname}
-      className="group fixed bottom-5 left-5 z-30 grid h-14 w-14 place-items-center rounded-full bg-[color:var(--wa)] shadow-lg transition-transform hover:scale-105 active:scale-95"
+      className="group fixed bottom-24 left-5 z-30 grid h-14 w-14 place-items-center rounded-full bg-[color:var(--wa)] shadow-lg transition-transform hover:scale-105 active:scale-95 md:bottom-5"
     >
       <svg viewBox="0 0 24 24" className="h-7 w-7 fill-background">
         <path d={WA_ICON} />

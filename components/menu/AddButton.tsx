@@ -3,6 +3,8 @@
 import { Minus, Plus } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useCartStore, useDishQuantity } from "@/store/cart-store";
+import { useUiStore } from "@/store/ui-store";
+import { getDish } from "@/data/menu";
 import { cn } from "@/lib/utils";
 
 export function AddButton({ dishId, className }: { dishId: string; className?: string }) {
@@ -10,11 +12,20 @@ export function AddButton({ dishId, className }: { dishId: string; className?: s
   const add = useCartStore((s) => s.add);
   const increment = useCartStore((s) => s.increment);
   const decrement = useCartStore((s) => s.decrement);
+  const showToast = useUiStore((s) => s.showToast);
+
+  const notify = () => {
+    const name = getDish(dishId)?.name ?? "Articolo";
+    showToast(`${name} aggiunto al carrello`);
+  };
 
   if (qty === 0) {
     return (
       <button
-        onClick={() => add(dishId)}
+        onClick={() => {
+          add(dishId);
+          notify();
+        }}
         aria-label="Aggiungi al carrello"
         className={cn(
           "grid h-9 w-9 place-items-center rounded-full border border-gold/40 bg-gold/10 text-gold transition-all hover:bg-gold hover:text-background active:scale-90",
@@ -53,7 +64,10 @@ export function AddButton({ dishId, className }: { dishId: string; className?: s
         </motion.span>
       </AnimatePresence>
       <button
-        onClick={() => increment(dishId)}
+        onClick={() => {
+          increment(dishId);
+          notify();
+        }}
         aria-label="Aggiungi uno"
         className="grid h-7 w-7 place-items-center rounded-full text-gold transition-colors hover:bg-gold/20 active:scale-90"
       >

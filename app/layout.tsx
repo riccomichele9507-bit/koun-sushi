@@ -4,7 +4,9 @@ import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { WhatsappFab } from "@/components/layout/WhatsappFab";
+import { BottomNav } from "@/components/layout/BottomNav";
 import { CartDrawer } from "@/components/cart/CartDrawer";
+import { Toaster } from "@/components/ui/Toaster";
 import { restaurant } from "@/data/restaurant";
 
 const cinzel = Cinzel({
@@ -53,9 +55,13 @@ export default function RootLayout({
     <html lang="it" className={`${cinzel.variable} ${cormorant.variable} ${jost.variable}`}>
       <body className="bg-grain min-h-dvh antialiased">
         <Header />
-        <main className="pb-28">{children}</main>
+        <main>{children}</main>
         <Footer />
+        {/* spazio per la barra inferiore fissa (solo mobile) */}
+        <div aria-hidden className="h-20 md:hidden" />
         <WhatsappFab />
+        <BottomNav />
+        <Toaster />
         <CartDrawer />
       </body>
     </html>
