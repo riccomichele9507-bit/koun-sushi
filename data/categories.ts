@@ -16,15 +16,15 @@ export interface Category {
 
 export const categories: Category[] = [
   { id: "antipasti", label: "Antipasti", kanji: "前", blurb: "Per iniziare", from: "#2a1d12", to: "#0f0b07", image: "/menu/15.png" },
-  { id: "insalate", label: "Insalate", kanji: "菜", blurb: "Fresche e leggere", from: "#16241a", to: "#080d0a" },
+  { id: "insalate", label: "Insalate", kanji: "菜", blurb: "Fresche e leggere", from: "#16241a", to: "#080d0a", image: "/menu/cat-insalate.png" },
   { id: "sashimi", label: "Sashimi", kanji: "刺", blurb: "Pesce crudo selezionato", from: "#2a1416", to: "#0d0708", image: "/menu/25.png" },
   { id: "carpacci", label: "Carpacci", kanji: "薄", blurb: "Tagli sottili in salsa", from: "#241a25", to: "#0c080d", image: "/menu/26.png" },
   { id: "tartare", label: "Tartare", kanji: "韃", blurb: "Battute d'autore", from: "#2b2110", to: "#0f0b06", image: "/menu/32.png" },
   { id: "chirashi", label: "Chirashi & Poke", kanji: "丼", blurb: "Bowl di riso e pesce", from: "#1d2412", to: "#0a0d07", image: "/menu/36.png" },
   { id: "nigiri", label: "Nigiri", kanji: "握", blurb: "Riso e topping (2 pz)", from: "#231a13", to: "#0c0806", image: "/menu/39.png" },
-  { id: "hosomaki", label: "Hosomaki", kanji: "細", blurb: "Roll sottili (6 pz)", from: "#15211f", to: "#080c0b" },
+  { id: "hosomaki", label: "Hosomaki", kanji: "細", blurb: "Roll sottili (6 pz)", from: "#15211f", to: "#080c0b", image: "/menu/cat-hosomaki.png" },
   { id: "temaki", label: "Temaki", kanji: "手", blurb: "Coni di alga (1 pz)", from: "#22191b", to: "#0b0708", image: "/menu/60.png" },
-  { id: "onigiri", label: "Onigiri", kanji: "結", blurb: "Polpette di riso", from: "#1c1c20", to: "#08080a" },
+  { id: "onigiri", label: "Onigiri", kanji: "結", blurb: "Polpette di riso", from: "#1c1c20", to: "#08080a", image: "/menu/cat-onigiri.png" },
   { id: "sushi-gio", label: "Sushi Giò", kanji: "匙", blurb: "Sul cucchiaio (2 pz)", from: "#241e10", to: "#0c0a06", image: "/menu/73.png" },
   { id: "gunkan", label: "Gunkan", kanji: "軍", blurb: "Barchette di alga (2 pz)", from: "#1a1a1c", to: "#070708", image: "/menu/82.png" },
   { id: "uramaki", label: "Uramaki", kanji: "裏", blurb: "Roll riso esterno", from: "#251910", to: "#0d0806", image: "/menu/88.png" },
