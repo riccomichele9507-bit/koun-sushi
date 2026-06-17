@@ -116,7 +116,7 @@ export function MenuExplorer() {
             {filtered.length} risultat{filtered.length === 1 ? "o" : "i"} per “{query}”
           </p>
           {filtered.length > 0 ? (
-            <div className="grid gap-3 sm:grid-cols-2">
+            <div className="grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3 xl:grid-cols-4">
               {filtered.map((d) => (
                 <DishCard key={d.id} dish={d} />
               ))}
@@ -143,7 +143,7 @@ export function MenuExplorer() {
                   <p className="text-xs text-muted">{cat.blurb}</p>
                 </div>
               </div>
-              <div className="grid gap-3 sm:grid-cols-2">
+              <div className="grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3 xl:grid-cols-4">
                 {items.map((d) => (
                   <DishCard key={d.id} dish={d} />
                 ))}
